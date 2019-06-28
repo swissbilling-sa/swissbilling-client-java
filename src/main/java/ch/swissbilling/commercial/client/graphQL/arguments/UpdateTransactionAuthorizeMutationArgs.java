@@ -4,6 +4,7 @@ import ch.swissbilling.commercial.client.enums.TransactionSourceEnum;
 import ch.swissbilling.commercial.client.graphQL.arguments.CreateTransactionAuthorizeMutationArgs;
 
 public class UpdateTransactionAuthorizeMutationArgs {
+    public final int source = TransactionSourceEnum.COMMERCIAL.getValue() + TransactionSourceEnum.COMMERCIAL_CLIENT_API.getValue();
     public String id;
     public String company;
     public String firstName;
@@ -29,8 +30,6 @@ public class UpdateTransactionAuthorizeMutationArgs {
     public int guaranteeType;
     public String reservationId;
     public int installmentPlan;
-
-    public final int source = TransactionSourceEnum.COMMERCIAL_CLIENT_API.getValue();
 
     public UpdateTransactionAuthorizeMutationArgs(){
     }
